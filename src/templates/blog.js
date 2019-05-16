@@ -21,8 +21,10 @@ const Blog = props => {
   const options = {
     renderNode: {
       'embedded-asset-block': node => {
-        const alt = ''
-        const url = ''
+        const { file, title } = node.data.target.fields
+        const alt = title['en-US']
+        const url = file['en-US'].url
+
         return <img src={url} alt={alt} />
       },
     },

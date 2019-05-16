@@ -4,7 +4,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   // 1. Get path to template
-  const blogTemplate = path.resolve('./src/templates/Blog.js')
+  const blogTemplate = path.resolve('./src/templates/blog.js')
 
   // 2. Get markdown data
   const res = await graphql(`
